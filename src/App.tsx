@@ -25,6 +25,16 @@ const getProducts = async ():Promise<CartItemType[]> =>
 const App = () => {
   const {data ,isLoading, error} = useQuery<CartItemType[]>("produ cts",getProducts);
   console.log(data)
+
+
+  const getTotalItems = () => null;
+  const handleAddToCart = () => null;
+  const HandleRemovefromCart = () => null;
+
+if(isLoading) return <LinearProgress/ >
+if(error) return <div>Something went Wrong</div>
+
+
   return <div className="App">Start</div>;
 };
 
